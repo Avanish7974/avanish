@@ -109,8 +109,9 @@ const Projects = () => {
               className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all group"
             >
               {/* Project image placeholder */}
-              <div className="relative h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-7xl">
-                {project.image}
+              <div className="relative h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden">
+                <div className="text-7xl">{project.image}</div>
+                <div className="absolute inset-0 bg-gradient-to-t from-card/50 to-transparent"></div>
                 <div className="absolute top-4 right-4">
                   <span className="bg-primary text-primary-foreground text-xs px-3 py-1 rounded-full font-semibold">
                     {project.category}

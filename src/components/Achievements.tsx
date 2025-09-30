@@ -61,8 +61,8 @@ const Achievements = () => {
               className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all group"
             >
               {/* Icon section */}
-              <div className={`relative h-48 bg-gradient-to-br ${achievement.color} flex items-center justify-center`}>
-                <span className="text-7xl">{achievement.icon}</span>
+              <div className={`relative h-48 bg-gradient-to-br ${achievement.color} flex items-center justify-center overflow-hidden`}>
+                <span className="text-7xl drop-shadow-lg">{achievement.icon}</span>
                 <div className="absolute top-4 right-4">
                   <CheckCircle className="w-8 h-8 text-white drop-shadow-lg" />
                 </div>

@@ -15,9 +15,9 @@ const About = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-[300px,1fr] gap-8 items-start bg-card rounded-3xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow">
+          <div className="grid grid-cols-1 md:grid-cols-[300px,1fr] gap-8 items-start bg-card rounded-3xl p-6 md:p-8 shadow-lg border border-border hover:shadow-xl transition-shadow">
             {/* Portrait */}
-            <div className="mx-auto">
+            <div className="mx-auto w-full flex justify-center">
               <div className="w-64 h-80 rounded-2xl overflow-hidden shadow-lg">
                 <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                   <span className="text-9xl">👤</span>
@@ -46,51 +46,51 @@ const About = () => {
 
               {/* Details table */}
               <div className="grid grid-cols-1 gap-4">
-                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">Branch:</span>
                   <span className="text-muted-foreground">Artificial Intelligence and Machine Learning</span>
                 </div>
-                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">Degree:</span>
                   <span className="text-muted-foreground">AIML 3rd Year UG</span>
                 </div>
-                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">College:</span>
                   <span className="text-muted-foreground">Sagar Institute of Research and Technology, Bhopal</span>
                 </div>
-                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">City:</span>
                   <span className="text-muted-foreground">Bhopal, India</span>
                 </div>
-                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">LinkedIn:</span>
-                  <a href="https://linkedin.com/in/avanish-singh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  <a href="https://linkedin.com/in/avanish-singh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
                     linkedin.com/in/avanish-singh
                   </a>
                 </div>
-                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">Github:</span>
-                  <a href="https://github.com/avanishsingh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  <a href="https://github.com/avanishsingh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
                     github.com/avanishsingh
                   </a>
                 </div>
-                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">Kaggle:</span>
-                  <a href="https://kaggle.com/avanishsingh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                  <a href="https://kaggle.com/avanishsingh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
                     kaggle.com/avanishsingh
                   </a>
                 </div>
-                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">Email:</span>
-                  <a href="mailto:avanish.singh@example.com" className="text-primary hover:underline">
+                  <a href="mailto:avanish.singh@example.com" className="text-primary hover:underline break-all">
                     avanish.singh@example.com
                   </a>
                 </div>
-                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">Internships:</span>
                   <span className="text-muted-foreground">TCS iON, Infosys Springboard</span>
                 </div>
-                <div className="grid grid-cols-[140px,1fr] gap-4 py-2">
+                <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2">
                   <span className="font-semibold">Technical Proficiency:</span>
                   <span className="text-muted-foreground">Python, C++, SQL, Machine Learning, Data Analytics, Power BI, Tableau</span>
                 </div>

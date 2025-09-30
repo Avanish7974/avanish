@@ -5,31 +5,31 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", icon: Code, percentage: 85 },
-        { name: "C++", icon: Code, percentage: 75 },
-        { name: "SQL", icon: Database, percentage: 80 },
-        { name: "HTML", icon: FileCode, percentage: 80 },
-        { name: "CSS", icon: FileCode, percentage: 75 },
+        { name: "Python", icon: Code, percentage: 90 },
+        { name: "C++", icon: Code, percentage: 80 },
+        { name: "SQL", icon: Database, percentage: 85 },
+        { name: "HTML", icon: FileCode, percentage: 85 },
+        { name: "CSS", icon: FileCode, percentage: 80 },
       ],
     },
     {
       title: "ML & Data Libraries",
       skills: [
-        { name: "NumPy", icon: BarChart, percentage: 82 },
-        { name: "Pandas", icon: Table, percentage: 85 },
-        { name: "Scikit-learn", icon: TrendingUp, percentage: 78 },
-        { name: "Matplotlib", icon: BarChart, percentage: 80 },
-        { name: "Seaborn", icon: BarChart, percentage: 75 },
+        { name: "NumPy", icon: BarChart, percentage: 88 },
+        { name: "Pandas", icon: Table, percentage: 90 },
+        { name: "Scikit-learn", icon: TrendingUp, percentage: 82 },
+        { name: "Matplotlib", icon: BarChart, percentage: 85 },
+        { name: "Seaborn", icon: BarChart, percentage: 80 },
       ],
     },
     {
       title: "Analytics Tools",
       skills: [
-        { name: "Tableau", icon: BarChart, percentage: 82 },
-        { name: "Power BI", icon: BarChart, percentage: 80 },
-        { name: "Excel", icon: FileSpreadsheet, percentage: 85 },
-        { name: "GitHub", icon: GitBranch, percentage: 80 },
-        { name: "ETL", icon: Database, percentage: 70 },
+        { name: "Tableau", icon: BarChart, percentage: 88 },
+        { name: "Power BI", icon: BarChart, percentage: 85 },
+        { name: "Excel", icon: FileSpreadsheet, percentage: 90 },
+        { name: "GitHub", icon: GitBranch, percentage: 85 },
+        { name: "ETL", icon: Database, percentage: 75 },
       ],
     },
   ];
@@ -49,14 +49,14 @@ const Skills = () => {
         </div>
 
         <div className="grid lg:grid-cols-[1fr,300px] gap-8">
-          {/* Skills Grid */}
-          <div className="space-y-12">
+          {/* Skills Grid - Three Columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {skillCategories.map((category) => (
               <div key={category.title}>
                 <h3 className="text-2xl font-bold text-primary mb-6">
                   {category.title}
                 </h3>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="space-y-4">
                   {category.skills.map((skill) => {
                     const Icon = skill.icon;
                     return (

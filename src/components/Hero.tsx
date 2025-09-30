@@ -117,44 +117,44 @@ const Hero = () => {
           </div>
 
           {/* Right side - Portrait with floating badges */}
-          <div className="relative flex justify-center items-center animate-scale-in">
+          <div className="relative flex justify-center items-center animate-scale-in order-first md:order-last">
             <div className="relative">
               {/* Main portrait */}
-              <div className="relative w-80 h-80 rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
                 <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                   <span className="text-8xl">👤</span>
                 </div>
               </div>
 
               {/* Floating badge - Review */}
-              <div className="absolute -top-4 -right-4 bg-card border-2 border-border rounded-2xl px-4 py-2 shadow-lg rotate-12 hover:rotate-0 transition-transform">
+              <div className="absolute -top-4 -right-4 bg-card border-2 border-border rounded-2xl px-3 py-2 md:px-4 md:py-2 shadow-lg rotate-12 hover:rotate-0 transition-transform">
                 <div className="flex items-center gap-2">
-                  <span className="text-2xl">⭐</span>
-                  <span className="font-bold">5.0 Review</span>
+                  <span className="text-xl md:text-2xl">⭐</span>
+                  <span className="font-bold text-sm md:text-base">5.0 Review</span>
                 </div>
               </div>
 
               {/* Floating badge - Expertise */}
-              <div className="absolute top-1/4 -left-8 bg-card border-2 border-border rounded-2xl px-4 py-3 shadow-lg -rotate-6 hover:rotate-0 transition-transform">
+              <div className="absolute top-1/4 -left-4 md:-left-8 bg-card border-2 border-border rounded-2xl px-3 py-2 md:px-4 md:py-3 shadow-lg -rotate-6 hover:rotate-0 transition-transform">
                 <div className="text-xs font-semibold mb-2">Expertise</div>
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <div className="w-16 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full"></div>
+                    <div className="w-12 md:w-16 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-full"></div>
                     <span className="text-xs">ML</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-14 h-1 bg-gradient-to-r from-accent to-accent/50 rounded-full"></div>
+                    <div className="w-10 md:w-14 h-1 bg-gradient-to-r from-accent to-accent/50 rounded-full"></div>
                     <span className="text-xs">EDA</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-12 h-1 bg-gradient-to-r from-secondary to-secondary/50 rounded-full"></div>
+                    <div className="w-8 md:w-12 h-1 bg-gradient-to-r from-secondary to-secondary/50 rounded-full"></div>
                     <span className="text-xs">Viz</span>
                   </div>
                 </div>
               </div>
 
               {/* Floating badge - Degree */}
-              <div className="absolute bottom-8 -left-12 bg-card border-2 border-border rounded-2xl px-4 py-2 shadow-lg -rotate-12 hover:rotate-0 transition-transform">
+              <div className="absolute bottom-8 -left-8 md:-left-12 bg-card border-2 border-border rounded-2xl px-3 py-2 md:px-4 md:py-2 shadow-lg -rotate-12 hover:rotate-0 transition-transform">
                 <div className="text-xs font-semibold">B.Tech AI&ML</div>
                 <div className="text-xs text-muted-foreground">SIRT 2023-2027</div>
               </div>
