@@ -1,0 +1,110 @@
+import { Button } from "@/components/ui/button";
+
+const About = () => {
+  return (
+    <section id="about" className="py-20 px-4">
+      <div className="container mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">About</h2>
+          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+            I'm acquiring the expertise and understanding necessary to develop captivating and 
+            interactive solutions through the utilization of Data Science, Artificial Intelligence, 
+            and Machine Learning technologies.
+          </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-[300px,1fr] gap-8 items-start bg-card rounded-3xl p-8 shadow-lg border border-border hover:shadow-xl transition-shadow">
+            {/* Portrait */}
+            <div className="mx-auto">
+              <div className="w-64 h-80 rounded-2xl overflow-hidden shadow-lg">
+                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+                  <span className="text-9xl">👤</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                  AIML 3rd Year Graduate.
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  I am currently in my third year of pursuing a B.Tech in Artificial Intelligence and 
+                  Machine Learning at the Sagar Institute of Research and Technology (SIRT), Bhopal. 
+                  With a strong foundation in AI and ML, I have contributed to multiple capstone projects, 
+                  leveraging technologies such as machine learning, deep learning, API integration, Flask, 
+                  and Python. I have actively participated in various technical competitions and IIT hackathons. 
+                  In addition to my academic and technical pursuits, I have been actively involved in community 
+                  events as a volunteer, further strengthening my collaborative and leadership skills. I am 
+                  passionate about advancing innovation in AI/ML and eager to collaborate with organizations 
+                  and individuals working at the forefront of this field.
+                </p>
+              </div>
+
+              {/* Details table */}
+              <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                  <span className="font-semibold">Branch:</span>
+                  <span className="text-muted-foreground">Artificial Intelligence and Machine Learning</span>
+                </div>
+                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                  <span className="font-semibold">Degree:</span>
+                  <span className="text-muted-foreground">AIML 3rd Year UG</span>
+                </div>
+                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                  <span className="font-semibold">College:</span>
+                  <span className="text-muted-foreground">Sagar Institute of Research and Technology, Bhopal</span>
+                </div>
+                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                  <span className="font-semibold">City:</span>
+                  <span className="text-muted-foreground">Bhopal, India</span>
+                </div>
+                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                  <span className="font-semibold">LinkedIn:</span>
+                  <a href="https://linkedin.com/in/avanish-singh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    linkedin.com/in/avanish-singh
+                  </a>
+                </div>
+                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                  <span className="font-semibold">Github:</span>
+                  <a href="https://github.com/avanishsingh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    github.com/avanishsingh
+                  </a>
+                </div>
+                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                  <span className="font-semibold">Kaggle:</span>
+                  <a href="https://kaggle.com/avanishsingh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    kaggle.com/avanishsingh
+                  </a>
+                </div>
+                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                  <span className="font-semibold">Email:</span>
+                  <a href="mailto:avanish.singh@example.com" className="text-primary hover:underline">
+                    avanish.singh@example.com
+                  </a>
+                </div>
+                <div className="grid grid-cols-[140px,1fr] gap-4 py-2 border-b border-border">
+                  <span className="font-semibold">Internships:</span>
+                  <span className="text-muted-foreground">TCS iON, Infosys Springboard</span>
+                </div>
+                <div className="grid grid-cols-[140px,1fr] gap-4 py-2">
+                  <span className="font-semibold">Technical Proficiency:</span>
+                  <span className="text-muted-foreground">Python, C++, SQL, Machine Learning, Data Analytics, Power BI, Tableau</span>
+                </div>
+              </div>
+
+              <Button asChild className="mt-6 bg-primary hover:bg-primary/90 rounded-full">
+                <a href="#projects">Show My Projects</a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
