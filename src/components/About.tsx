@@ -67,26 +67,32 @@ const About = () => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">LinkedIn:</span>
-                  <a href="https://linkedin.com/in/avanish-singh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
-                    linkedin.com/in/avanish-singh
+                  <a href="https://www.linkedin.com/in/avanish-singh-3530812b1" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
+                    linkedin.com/in/avanish-singh-3530812b1
                   </a>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">Github:</span>
-                  <a href="https://github.com/avanishsingh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
-                    github.com/avanishsingh
+                  <a href="https://github.com/Avanish7974" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
+                    github.com/Avanish7974
                   </a>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">Kaggle:</span>
-                  <a href="https://kaggle.com/avanishsingh" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
-                    kaggle.com/avanishsingh
+                  <a href="https://www.kaggle.com/avanish1234789" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
+                    kaggle.com/avanish1234789
                   </a>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">Email:</span>
-                  <a href="mailto:avanish.singh@example.com" className="text-primary hover:underline break-all">
-                    avanish.singh@example.com
+                  <a href="mailto:avanishsingh4318@gmail.com" className="text-primary hover:underline break-all">
+                    avanishsingh4318@gmail.com
+                  </a>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
+                  <span className="font-semibold">Phone:</span>
+                  <a href="tel:+917974037798" className="text-primary hover:underline break-all">
+                    +91 797 403 7798
                   </a>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">

@@ -5,31 +5,31 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", icon: Code, percentage: 78 },
-        { name: "C++", icon: Code, percentage: 72 },
-        { name: "SQL", icon: Database, percentage: 75 },
-        { name: "HTML", icon: FileCode, percentage: 70 },
-        { name: "CSS", icon: FileCode, percentage: 68 },
+        { name: "Python", icon: Code, percentage: 72 },
+        { name: "C++", icon: Code, percentage: 68 },
+        { name: "SQL", icon: Database, percentage: 70 },
+        { name: "HTML", icon: FileCode, percentage: 65 },
+        { name: "CSS", icon: FileCode, percentage: 63 },
       ],
     },
     {
       title: "ML & Data Libraries",
       skills: [
-        { name: "NumPy", icon: BarChart, percentage: 76 },
-        { name: "Pandas", icon: Table, percentage: 80 },
-        { name: "Scikit-learn", icon: TrendingUp, percentage: 74 },
-        { name: "Matplotlib", icon: BarChart, percentage: 72 },
-        { name: "Seaborn", icon: BarChart, percentage: 70 },
+        { name: "NumPy", icon: BarChart, percentage: 70 },
+        { name: "Pandas", icon: Table, percentage: 75 },
+        { name: "Scikit-learn", icon: TrendingUp, percentage: 68 },
+        { name: "Matplotlib", icon: BarChart, percentage: 67 },
+        { name: "Seaborn", icon: BarChart, percentage: 65 },
       ],
     },
     {
       title: "Analytics Tools",
       skills: [
-        { name: "Tableau", icon: BarChart, percentage: 75 },
-        { name: "Power BI", icon: BarChart, percentage: 73 },
-        { name: "Excel", icon: FileSpreadsheet, percentage: 80 },
-        { name: "GitHub", icon: GitBranch, percentage: 72 },
-        { name: "ETL", icon: Database, percentage: 65 },
+        { name: "Tableau", icon: BarChart, percentage: 70 },
+        { name: "Power BI", icon: BarChart, percentage: 68 },
+        { name: "Excel", icon: FileSpreadsheet, percentage: 75 },
+        { name: "GitHub", icon: GitBranch, percentage: 67 },
+        { name: "ETL", icon: Database, percentage: 62 },
       ],
     },
   ];
@@ -37,7 +37,7 @@ const Skills = () => {
   const stats = [
     { label: "Academic Terms", value: "4+", color: "text-primary" },
     { label: "Projects Completed", value: "12+", color: "text-accent" },
-    { label: "Learning Hours", value: "800+", color: "text-secondary" },
+    { label: "Learning Hours", value: "600+", color: "text-secondary" },
   ];
 
   return (

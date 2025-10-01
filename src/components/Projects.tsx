@@ -15,54 +15,14 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Sales Analytics Dashboard",
-      description:
-        "Interactive Tableau dashboard analyzing sales performance across regions with KPI tracking and trend analysis.",
-      image: tableauImg,
-      category: "Dashboards",
-      tags: ["Tableau", "SQL", "Excel"],
-      liveLink: "https://public.tableau.com/",
-      githubLink: "https://github.com",
-    },
-    {
-      title: "Customer Insights Power BI",
-      description:
-        "Comprehensive Power BI report showcasing customer behavior patterns and segmentation analysis.",
-      image: powerbiImg,
-      category: "Dashboards",
-      tags: ["Power BI", "DAX", "SQL"],
-      liveLink: "https://app.powerbi.com/",
-      githubLink: "https://github.com",
-    },
-    {
-      title: "AI/ML Database EDA",
-      description:
-        "Comprehensive exploratory data analysis on AI/ML datasets using Python, revealing key insights and patterns.",
-      image: edaImg,
-      category: "EDA",
-      tags: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-      liveLink: "https://nbviewer.org/",
-      githubLink: "https://github.com",
-    },
-    {
       title: "Laptop Price Prediction",
       description:
         "A machine learning model that predicts laptop prices based on processor, RAM, storage, and GPU. Implemented using Python, Pandas, and Scikit-learn.",
       image: laptopImg,
       category: "EDA",
       tags: ["Python", "ML", "Scikit-learn", "Pandas"],
-      liveLink: "https://huggingface.co/spaces",
-      githubLink: "https://github.com",
-    },
-    {
-      title: "Excel Dashboard",
-      description:
-        "Advanced Excel dashboard with pivot tables, charts, and automated reporting for business intelligence.",
-      image: excelImg,
-      category: "Dashboards",
-      tags: ["Excel", "VBA", "Charts"],
-      liveLink: "https://onedrive.live.com/",
-      githubLink: "https://github.com",
+      liveLink: "https://priceinteldashboard-gsxutrlqtm7vis3gbyg9tt.streamlit.app/",
+      githubLink: "https://github.com/Avanish7974",
     },
     {
       title: "Blinkit Clone",
@@ -71,8 +31,48 @@ const Projects = () => {
       image: blinkitImg,
       category: "Web",
       tags: ["HTML", "CSS", "JavaScript"],
-      liveLink: "https://vercel.app/",
-      githubLink: "https://github.com",
+      liveLink: "https://blinkit-ouwa.vercel.app/",
+      githubLink: "https://github.com/Avanish7974",
+    },
+    {
+      title: "EDA on IMDb Dataset",
+      description:
+        "Comprehensive exploratory data analysis on IMDb dataset using Python, revealing key insights and patterns.",
+      image: edaImg,
+      category: "EDA",
+      tags: ["Python", "Pandas", "Matplotlib", "Seaborn"],
+      liveLink: "https://github.com/Avanish7974/IMDb_EDA/blob/main/IMDB.ipynb.ipynb",
+      githubLink: "https://github.com/Avanish7974/IMDb_EDA",
+    },
+    {
+      title: "Tableau Dashboard",
+      description:
+        "Interactive Tableau dashboard analyzing sales performance across regions with KPI tracking and trend analysis.",
+      image: tableauImg,
+      category: "Dashboards",
+      tags: ["Tableau", "SQL", "Excel"],
+      liveLink: "https://www.linkedin.com/posts/avanish-singh-3530812b1_tableau-datavisualization-dataanalytics-activity-7367301077223759872-EHCM",
+      githubLink: "https://github.com/Avanish7974",
+    },
+    {
+      title: "Power BI Dashboard",
+      description:
+        "Comprehensive Power BI report showcasing customer behavior patterns and segmentation analysis.",
+      image: powerbiImg,
+      category: "Dashboards",
+      tags: ["Power BI", "DAX", "SQL"],
+      liveLink: "https://www.linkedin.com/posts/avanish-singh-3530812b1_powerbi-dashboarddesign-dataanalytics-activity-7352806313396998144-XIxK",
+      githubLink: "https://github.com/Avanish7974",
+    },
+    {
+      title: "Excel Dashboard",
+      description:
+        "HR analytics dashboard with pivot tables, charts, and automated reporting for business intelligence.",
+      image: excelImg,
+      category: "Dashboards",
+      tags: ["Excel", "VBA", "Charts"],
+      liveLink: "https://www.linkedin.com/posts/avanish-singh-3530812b1_datascience-exceldashboard-hranalytics-activity-7340024241418915841-MZcU",
+      githubLink: "https://github.com/Avanish7974",
     },
   ];
 
