@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin, Mail } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
@@ -39,8 +41,11 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/20" />
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img src={heroBg} alt="Hero background" className="w-full h-full object-cover opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90"></div>
+      </div>
       
       <div className="container mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -121,9 +126,11 @@ const Hero = () => {
             <div className="relative">
               {/* Main portrait */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-8xl">👤</span>
-                </div>
+                <img 
+                  src={profilePhoto} 
+                  alt="Avanish Singh" 
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Floating badge - Review */}

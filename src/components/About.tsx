@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   return (
@@ -19,9 +20,11 @@ const About = () => {
             {/* Portrait */}
             <div className="mx-auto w-full flex justify-center">
               <div className="w-64 h-80 rounded-2xl overflow-hidden shadow-lg">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <span className="text-9xl">👤</span>
-                </div>
+                <img 
+                  src={profilePhoto} 
+                  alt="Avanish Singh" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 

@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import tableauImg from "@/assets/tableau-dashboard.jpg";
+import powerbiImg from "@/assets/powerbi-dashboard.jpg";
+import edaImg from "@/assets/eda-project.jpg";
+import laptopImg from "@/assets/laptop-price-prediction.jpg";
+import excelImg from "@/assets/excel-dashboard.jpg";
+import blinkitImg from "@/assets/blinkit-clone.jpg";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -12,7 +18,7 @@ const Projects = () => {
       title: "Sales Analytics Dashboard",
       description:
         "Interactive Tableau dashboard analyzing sales performance across regions with KPI tracking and trend analysis.",
-      image: "📊",
+      image: tableauImg,
       category: "Dashboards",
       tags: ["Tableau", "SQL", "Excel"],
       liveLink: "https://public.tableau.com/",
@@ -22,7 +28,7 @@ const Projects = () => {
       title: "Customer Insights Power BI",
       description:
         "Comprehensive Power BI report showcasing customer behavior patterns and segmentation analysis.",
-      image: "📈",
+      image: powerbiImg,
       category: "Dashboards",
       tags: ["Power BI", "DAX", "SQL"],
       liveLink: "https://app.powerbi.com/",
@@ -32,7 +38,7 @@ const Projects = () => {
       title: "AI/ML Database EDA",
       description:
         "Comprehensive exploratory data analysis on AI/ML datasets using Python, revealing key insights and patterns.",
-      image: "🐍",
+      image: edaImg,
       category: "EDA",
       tags: ["Python", "Pandas", "Matplotlib", "Seaborn"],
       liveLink: "https://nbviewer.org/",
@@ -42,7 +48,7 @@ const Projects = () => {
       title: "Laptop Price Prediction",
       description:
         "A machine learning model that predicts laptop prices based on processor, RAM, storage, and GPU. Implemented using Python, Pandas, and Scikit-learn.",
-      image: "💻",
+      image: laptopImg,
       category: "EDA",
       tags: ["Python", "ML", "Scikit-learn", "Pandas"],
       liveLink: "https://huggingface.co/spaces",
@@ -52,7 +58,7 @@ const Projects = () => {
       title: "Excel Dashboard",
       description:
         "Advanced Excel dashboard with pivot tables, charts, and automated reporting for business intelligence.",
-      image: "📑",
+      image: excelImg,
       category: "Dashboards",
       tags: ["Excel", "VBA", "Charts"],
       liveLink: "https://onedrive.live.com/",
@@ -62,7 +68,7 @@ const Projects = () => {
       title: "Blinkit Clone",
       description:
         "Full-stack e-commerce web application clone with modern UI/UX and responsive design.",
-      image: "🛒",
+      image: blinkitImg,
       category: "Web",
       tags: ["HTML", "CSS", "JavaScript"],
       liveLink: "https://vercel.app/",
@@ -108,9 +114,13 @@ const Projects = () => {
               key={project.title}
               className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all group"
             >
-              {/* Project image placeholder */}
-              <div className="relative h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden">
-                <div className="text-7xl">{project.image}</div>
+              {/* Project image */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/50 to-transparent"></div>
                 <div className="absolute top-4 right-4">
                   <span className="bg-primary text-primary-foreground text-xs px-3 py-1 rounded-full font-semibold">
