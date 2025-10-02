@@ -23,6 +23,16 @@ const Achievements = () => {
       badgeColor: "bg-purple-500/10 text-purple-600 border-purple-500/20",
     },
     {
+      title: "AI/ML Geodata Analysis",
+      subtitle: "ISRO - Indian Institute of Remote Sensing (IIRS)",
+      description:
+      "Successfully participated in the online course 'AI/ML for Geodata Analysis' conducted by ISRO, Department of Space, Government of India, from 19 August 2024 to 23 August 2024 (total duration: 7 hours 30 minutes).",
+      icon: "🚀",
+      color: "from-blue-500 to-cyan-500",
+      year: "2024",
+      badgeColor: "bg-blue-500/10 text-blue-600 border-blue-500/20",
+    },
+    {
       title: "Communication Skills",
       subtitle: "IBM Certificate",
       description:
