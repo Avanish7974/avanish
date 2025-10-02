@@ -25,20 +25,21 @@ const Skills = () => {
     {
       title: "Analytics Tools",
       skills: [
-        { name: "Tableau", icon: BarChart, percentage: 70 },
-        { name: "Power BI", icon: BarChart, percentage: 68 },
-        { name: "Excel", icon: FileSpreadsheet, percentage: 75 },
-        { name: "GitHub", icon: GitBranch, percentage: 67 },
+        { name: "Tableau", icon: BarChart, percentage: 79 },
+        { name: "Power BI", icon: BarChart, percentage: 85 },
+        { name: "Excel", icon: FileSpreadsheet, percentage: 80 },
+        { name: "GitHub", icon: GitBranch, percentage: 75 },
         { name: "ETL", icon: Database, percentage: 62 },
       ],
     },
   ];
 
   const stats = [
-    { label: "Academic Terms", value: "4+", color: "text-primary" },
-    { label: "Projects Completed", value: "12+", color: "text-accent" },
-    { label: "Learning Hours", value: "600+", color: "text-secondary" },
+  { label: "Academic Terms", value: "4+", color: "text-primary" },
+  { label: "Projects Completed", value: "12+", color: "text-accent" },
+  { label: "Tools & Technologies", value: "20+", color: "text-secondary" },
   ];
+
 
   return (
     <section id="skills" className="py-20 px-4">
