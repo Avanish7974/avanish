@@ -11,7 +11,7 @@ import blinkitImg from "@/assets/blinkit-clone.jpg";
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const filters = ["All", "Dashboards", "EDA", "Web"];
+  const filters = ["All", "Dashboards", "EDA", "Web","ML"];
 
   const projects = [
     {
@@ -19,7 +19,7 @@ const Projects = () => {
       description:
         "A machine learning model that predicts laptop prices based on processor, RAM, storage, and GPU. Implemented using Python, Pandas, and Scikit-learn.",
       image: laptopImg,
-      category: "EDA",
+      category: "ML",
       tags: ["Python", "ML", "Scikit-learn", "Pandas"],
       liveLink: "https://priceinteldashboard-gh3n4hdd67taeaxnjjaiqp.streamlit.app/#laptop-configuration",
       githubLink: "https://github.com/Avanish7974",
