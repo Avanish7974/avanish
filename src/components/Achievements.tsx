@@ -33,6 +33,16 @@ const Achievements = () => {
       badgeColor: "bg-blue-500/10 text-blue-600 border-blue-500/20",
     },
     {
+      title: "Advanced Certification in Data Science",
+      subtitle: "E&ICT Academy IIT Guwahati (in association with Cybrom Technology)",
+      description:
+      "Enrolled in the Advanced Certification in Data Science, organized by E&ICT Academy IIT Guwahati in collaboration with Cybrom Technology.",
+      icon: "📊",
+      color: "from-indigo-500 to-sky-500",
+      year: "2025",
+      badgeColor: "bg-indigo-500/10 text-indigo-600 border-indigo-500/20",
+    },
+    {
       title: "Communication Skills",
       subtitle: "IBM Certificate",
       description:
