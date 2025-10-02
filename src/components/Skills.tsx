@@ -37,7 +37,7 @@ const Skills = () => {
   const stats = [
   { label: "Academic Terms", value: "4+", color: "text-primary" },
   { label: "Projects Completed", value: "12+", color: "text-accent" },
-  { label: "Tools & Technologies", value: "20+", color: "text-secondary" },
+  { label: "Tools & Technologies", value: "20+", color: "text-accent" },
   ];
 
 
