@@ -60,7 +60,7 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 797 403 7798",
+      value: "+91 7974037798",
       href: "tel:+917974037798",
       bgColor: "bg-green-500/10",
       iconColor: "text-green-500",
