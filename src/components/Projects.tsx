@@ -15,13 +15,13 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Laptop Price Prediction",
+      title: "PriceIntel Dashboard",
       description:
         "A machine learning model that predicts laptop prices based on processor, RAM, storage, and GPU. Implemented using Python, Pandas, and Scikit-learn.",
       image: laptopImg,
       category: "EDA",
       tags: ["Python", "ML", "Scikit-learn", "Pandas"],
-      liveLink: "https://priceinteldashboard-gsxutrlqtm7vis3gbyg9tt.streamlit.app/",
+      liveLink: "https://priceinteldashboard-gh3n4hdd67taeaxnjjaiqp.streamlit.app/#laptop-configuration",
       githubLink: "https://github.com/Avanish7974",
     },
     {
