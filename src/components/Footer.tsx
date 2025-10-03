@@ -53,20 +53,23 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
+                aria-label="GitHub Profile"
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/avanish-singh-3530812b1/"
+                href="https://www.linkedin.com/in/avanish-singh23/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-secondary hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="mailto:avanishsingh4318@gmail.com"
                 className="p-3 rounded-full bg-secondary hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
+                aria-label="Email Contact"
               >
                 <Mail className="h-5 w-5" />
               </a>

@@ -43,7 +43,12 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
-        <img src={heroBg} alt="Hero background" className="w-full h-full object-cover opacity-30" />
+        <img 
+          src={heroBg} 
+          alt="Abstract technology background with data visualization" 
+          className="w-full h-full object-cover opacity-30" 
+          loading="lazy"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90"></div>
       </div>
       
@@ -79,14 +84,16 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-card hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
+                aria-label="GitHub Profile"
               >
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="https://www.linkedin.com/in/avanish-singh-3530812b1"
+                href="https://www.linkedin.com/in/avanish-singh23/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-card hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
@@ -122,8 +129,9 @@ const Hero = () => {
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-primary/20 shadow-2xl">
                 <img 
                   src={profilePhoto} 
-                  alt="Avanish Singh" 
+                  alt="Avanish Singh - Data Science and AI/ML Enthusiast" 
                   className="w-full h-full object-cover"
+                  loading="eager"
                 />
               </div>
 

@@ -6,6 +6,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
@@ -30,6 +31,22 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Detect active section
+      const sections = navLinks.map(link => link.href.substring(1));
+      const scrollPosition = window.scrollY + 100;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const top = element.offsetTop;
+          const height = element.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -68,9 +85,14 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-foreground/80 hover:text-primary transition-colors font-medium"
+                className={`text-foreground/80 hover:text-primary transition-colors font-medium relative ${
+                  activeSection === link.href.substring(1) ? "text-primary" : ""
+                }`}
               >
                 {link.name}
+                {activeSection === link.href.substring(1) && (
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full" />
+                )}
               </a>
             ))}
           </div>
@@ -82,6 +104,7 @@ const Navbar = () => {
               variant="ghost"
               size="icon"
               className="rounded-full"
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
             >
               {isDark ? (
                 <Sun className="h-5 w-5" />

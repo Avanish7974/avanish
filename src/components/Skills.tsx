@@ -5,9 +5,9 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", icon: Code, percentage: 72 },
+        { name: "Python", icon: Code, percentage: 75 },
         { name: "C++", icon: Code, percentage: 68 },
-        { name: "SQL", icon: Database, percentage: 70 },
+        { name: "SQL", icon: Database, percentage: 72 },
         { name: "HTML", icon: FileCode, percentage: 65 },
         { name: "CSS", icon: FileCode, percentage: 63 },
       ],
@@ -15,29 +15,29 @@ const Skills = () => {
     {
       title: "ML & Data Libraries",
       skills: [
-        { name: "NumPy", icon: BarChart, percentage: 70 },
-        { name: "Pandas", icon: Table, percentage: 75 },
-        { name: "Scikit-learn", icon: TrendingUp, percentage: 68 },
-        { name: "Matplotlib", icon: BarChart, percentage: 67 },
-        { name: "Seaborn", icon: BarChart, percentage: 65 },
+        { name: "NumPy", icon: BarChart, percentage: 73 },
+        { name: "Pandas", icon: Table, percentage: 78 },
+        { name: "Scikit-learn", icon: TrendingUp, percentage: 70 },
+        { name: "Matplotlib", icon: BarChart, percentage: 68 },
+        { name: "Seaborn", icon: BarChart, percentage: 67 },
       ],
     },
     {
       title: "Analytics Tools",
       skills: [
-        { name: "Tableau", icon: BarChart, percentage: 79 },
+        { name: "Tableau", icon: BarChart, percentage: 80 },
         { name: "Power BI", icon: BarChart, percentage: 85 },
-        { name: "Excel", icon: FileSpreadsheet, percentage: 80 },
-        { name: "GitHub", icon: GitBranch, percentage: 75 },
-        { name: "ETL", icon: Database, percentage: 62 },
+        { name: "Excel", icon: FileSpreadsheet, percentage: 82 },
+        { name: "GitHub", icon: GitBranch, percentage: 74 },
+        { name: "ETL", icon: Database, percentage: 65 },
       ],
     },
   ];
 
   const stats = [
-  { label: "Academic Terms", value: "4+", color: "text-primary" },
+  { label: "Learning Hours", value: "800+", color: "text-primary" },
   { label: "Projects Completed", value: "12+", color: "text-accent" },
-  { label: "Tools & Technologies", value: "20+", color: "text-accent" },
+  { label: "Tools & Technologies", value: "15+", color: "text-accent" },
   ];
 
 
