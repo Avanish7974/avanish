@@ -51,7 +51,7 @@ const Skills = () => {
 
         <div className="grid lg:grid-cols-[1fr,300px] gap-8">
           {/* Skills Grid - Three Columns */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category) => (
               <div key={category.title}>
                 <h3 className="text-2xl font-bold text-primary mb-6">
@@ -63,7 +63,7 @@ const Skills = () => {
                     return (
                       <div
                         key={skill.name}
-                        className="bg-card rounded-2xl p-6 border border-border hover:shadow-lg hover:-translate-y-1 transition-all group"
+                        className="bg-card rounded-2xl p-6 border border-border hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all group"
                       >
                         <div className="flex items-center justify-between mb-4">
                           <div className="flex items-center gap-3">

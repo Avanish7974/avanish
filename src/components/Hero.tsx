@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin } from "lucide-react";
+import { SiKaggle } from "react-icons/si";
 import heroBg from "@/assets/hero-bg.jpg";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
@@ -96,6 +97,15 @@ const Hero = () => {
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.kaggle.com/avanish1234789"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-card hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
+                aria-label="Kaggle Profile"
+              >
+                <SiKaggle className="h-5 w-5" />
               </a>
             </div>
 

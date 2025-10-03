@@ -74,11 +74,11 @@ const Achievements = () => {
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all group"
+              className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all group"
             >
               {/* Icon section */}
               <div className={`relative h-48 bg-gradient-to-br ${achievement.color} flex items-center justify-center overflow-hidden`}>

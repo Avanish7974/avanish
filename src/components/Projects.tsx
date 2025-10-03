@@ -112,7 +112,7 @@ const Projects = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.title}
-              className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all group"
+              className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all group"
             >
               {/* Project image */}
               <div className="relative h-48 overflow-hidden">

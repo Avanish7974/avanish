@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { SiKaggle } from "react-icons/si";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -65,6 +66,15 @@ const Footer = () => {
                 aria-label="LinkedIn Profile"
               >
                 <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.kaggle.com/avanish1234789"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full bg-secondary hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
+                aria-label="Kaggle Profile"
+              >
+                <SiKaggle className="h-5 w-5" />
               </a>
               <a
                 href="mailto:avanishsingh4318@gmail.com"

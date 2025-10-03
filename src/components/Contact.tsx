@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Linkedin, Github, Phone, Download, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Download, Send } from "lucide-react";
+import { SiKaggle } from "react-icons/si";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -44,8 +45,8 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "/in/avanish-singh-3530812b1",
-      href: "https://www.linkedin.com/in/avanish-singh-3530812b1",
+      value: "/in/avanish-singh23",
+      href: "https://www.linkedin.com/in/avanish-singh23/",
       bgColor: "bg-blue-600/10",
       iconColor: "text-blue-600",
     },
@@ -58,12 +59,12 @@ const Contact = () => {
       iconColor: "text-gray-600 dark:text-gray-400",
     },
     {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 7974037798",
-      href: "tel:+917974037798",
-      bgColor: "bg-green-500/10",
-      iconColor: "text-green-500",
+      icon: SiKaggle,
+      label: "Kaggle",
+      value: "@avanish1234789",
+      href: "https://www.kaggle.com/avanish1234789",
+      bgColor: "bg-cyan-500/10",
+      iconColor: "text-cyan-500",
     },
   ];
 
@@ -88,7 +89,7 @@ const Contact = () => {
             </div>
 
             {/* Contact methods */}
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {contactMethods.map((method) => {
                 const Icon = method.icon;
                 return (
@@ -97,7 +98,7 @@ const Contact = () => {
                     href={method.href}
                     target={method.href.startsWith("http") ? "_blank" : undefined}
                     rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="bg-card rounded-2xl p-6 border border-border hover:shadow-lg hover:-translate-y-1 transition-all group"
+                    className="bg-card rounded-2xl p-6 border border-border hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all group"
                   >
                     <div className={`w-12 h-12 rounded-xl ${method.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                       <Icon className={`w-6 h-6 ${method.iconColor}`} />
