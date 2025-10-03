@@ -35,9 +35,9 @@ const Experience = () => {
       icon: GraduationCap,
     },
     {
-      title: "Data Science Internship",
+      title: "Data Science Training",
       company: "Cybrom Technology",
-      type: "Internship",
+      type: "Training",
       period: "January 2025 - September 2025",
       description:
         "Worked on real-world data science projects, analyzing datasets, building predictive models, and generating actionable insights.",
