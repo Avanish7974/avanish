@@ -9,9 +9,7 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">About</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-            I'm acquiring the expertise and understanding necessary to develop captivating and 
-            interactive solutions through the utilization of Data Science, Artificial Intelligence, 
-            and Machine Learning technologies.
+            I'm building the skills and knowledge required to create engaging and dynamic solutions by harnessing the capabilities of Data Science, Artificial Intelligence, and Machine Learning technologies.
           </p>
         </div>
 
@@ -32,18 +30,10 @@ const About = () => {
             <div className="space-y-6">
               <div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                  AIML 3rd Year Graduate.
+                  B.Tech AI & ML Student.
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I am currently in my third year of pursuing a B.Tech in Artificial Intelligence and 
-                  Machine Learning at the Sagar Institute of Research and Technology (SIRT), Bhopal. 
-                  With a strong foundation in AI and ML, I have contributed to multiple capstone projects, 
-                  leveraging technologies such as machine learning, deep learning, API integration, Flask, 
-                  and Python. I have actively participated in various technical competitions and IIT hackathons. 
-                  In addition to my academic and technical pursuits, I have been actively involved in community 
-                  events as a volunteer, further strengthening my collaborative and leadership skills. I am 
-                  passionate about advancing innovation in AI/ML and eager to collaborate with organizations 
-                  and individuals working at the forefront of this field.
+                  I am a dedicated B.Tech student specializing in Artificial Intelligence and Machine Learning at Sagar Institute of Research & Technology (SIRT), Bhopal, with an expected graduation in 2027. My journey in this field is driven by a passion for harnessing the power of data to solve real-world challenges. Proficient in programming languages and tools such as Python, SQL, Power BI, and Tableau, I have developed a strong foundation in machine learning libraries including Pandas, NumPy, Scikit-learn, and Seaborn. My hands-on experience encompasses data visualization, exploratory data analysis, and creating impactful dashboards that narrate compelling stories from raw data. I thrive in collaborative environments and actively participate in hackathons and projects, continuously enhancing my skills through platforms like Google Cloud Arcade, Infosys Springboard, and Kaggle. As I progress in my studies, I am eager to dive deeper into the fascinating world of data science and AI, aspiring to contribute innovative solutions that drive positive change.
                 </p>
               </div>
 
@@ -97,7 +87,7 @@ const About = () => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">Internships:</span>
-                  <span className="text-muted-foreground">TCS iON, Infosys Springboard</span>
+                  <span className="text-muted-foreground">TCS iON, Infosys Springboard,Cybrom Technology</span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2">
                   <span className="font-semibold">Technical Proficiency:</span>
