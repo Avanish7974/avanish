@@ -10,7 +10,7 @@ const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const languages = ["Python", "C++", "SQL", "POWER BI","TABLEAU","GitHub"];
+  const languages = ["Python", "C++", "SQL", "Power BI","Tableau","GitHub"];
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
