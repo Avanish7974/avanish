@@ -34,6 +34,22 @@ const Experience = () => {
       technologies: ["Machine Learning", "Python", "Deep Learning", "Neural Networks"],
       icon: GraduationCap,
     },
+    {
+      title: "Data Science Internship",
+      company: "Cybrom Technology",
+      type: "Internship",
+      period: "January 2025 - September 2025",
+      description:
+        "Worked on real-world data science projects, analyzing datasets, building predictive models, and generating actionable insights.",
+      achievements: [
+        "Developed predictive models using Python and machine learning libraries",
+        "Performed data cleaning, feature engineering, and visualization",
+        "Collaborated with team members on end-to-end data science projects",
+        "Presented insights and reports to facualty",
+      ],
+      technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Power BI", "Tableau"],
+      icon: GraduationCap,
+    },
   ];
 
   return (
