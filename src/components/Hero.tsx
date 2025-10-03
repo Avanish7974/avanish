@@ -167,7 +167,7 @@ const Hero = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-8 md:w-12 h-1 bg-gradient-to-r from-secondary to-secondary/50 rounded-full"></div>
-                    <span className="text-xs">Viz</span>
+                    <span className="text-xs">SQL</span>
                   </div>
                 </div>
               </div>
