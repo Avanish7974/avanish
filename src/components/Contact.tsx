@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Linkedin, Github, Download, Send } from "lucide-react";
-import { SiKaggle } from "react-icons/si";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faKaggle } from "@fortawesome/free-brands-svg-icons";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -59,7 +60,7 @@ const Contact = () => {
       iconColor: "text-gray-600 dark:text-gray-400",
     },
     {
-      icon: SiKaggle,
+      icon: faKaggle,
       label: "Kaggle",
       value: "@avanish1234789",
       href: "https://www.kaggle.com/avanish1234789",
@@ -90,8 +91,9 @@ const Contact = () => {
 
             {/* Contact methods */}
             <div className="grid sm:grid-cols-2 gap-4">
-              {contactMethods.map((method) => {
+            {contactMethods.map((method) => {
                 const Icon = method.icon;
+                const isFontAwesome = typeof Icon === 'object';
                 return (
                   <a
                     key={method.label}
@@ -101,7 +103,11 @@ const Contact = () => {
                     className="bg-card rounded-2xl p-4 sm:p-6 border border-border hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all group"
                   >
                     <div className={`w-12 h-12 rounded-xl ${method.bgColor} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
-                      <Icon className={`w-6 h-6 ${method.iconColor}`} />
+                      {isFontAwesome ? (
+                        <FontAwesomeIcon icon={Icon} className={`w-6 h-6 ${method.iconColor}`} />
+                      ) : (
+                        <Icon className={`w-6 h-6 ${method.iconColor}`} />
+                      )}
                     </div>
                     <div className="font-semibold mb-1 text-sm sm:text-base">{method.label}</div>
                     <div className="text-xs sm:text-sm text-muted-foreground break-words">

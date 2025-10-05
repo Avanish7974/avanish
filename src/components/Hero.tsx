@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Download, Github, Linkedin } from "lucide-react";
-import { SiKaggle } from "react-icons/si";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faKaggle } from "@fortawesome/free-brands-svg-icons";
 import heroBg from "@/assets/hero-bg.jpg";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
@@ -105,7 +106,7 @@ const Hero = () => {
                 className="p-3 rounded-full bg-card hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
                 aria-label="Kaggle Profile"
               >
-                <SiKaggle className="h-6 w-6" />
+                <FontAwesomeIcon icon={faKaggle} className="h-6 w-6" />
               </a>
             </div>
 

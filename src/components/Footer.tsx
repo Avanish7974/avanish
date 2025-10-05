@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, Heart } from "lucide-react";
-import { SiKaggle } from "react-icons/si";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faKaggle } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -74,7 +75,7 @@ const Footer = () => {
                 className="p-3 rounded-full bg-secondary hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
                 aria-label="Kaggle Profile"
               >
-                <SiKaggle className="h-5 w-5" />
+                <FontAwesomeIcon icon={faKaggle} className="h-5 w-5" />
               </a>
               <a
                 href="mailto:avanishsingh4318@gmail.com"
