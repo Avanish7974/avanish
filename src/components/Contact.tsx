@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Download, Send } from "lucide-react";
+import { Download, Send } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faKaggle, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -36,7 +37,7 @@ const Contact = () => {
 
   const contactMethods = [
     {
-      icon: Mail,
+      icon: faEnvelope,
       label: "Email",
       value: "avanishsingh4318@gmail.com",
       href: "mailto:avanishsingh4318@gmail.com",
@@ -91,10 +92,7 @@ const Contact = () => {
 
             {/* Contact methods */}
             <div className="grid sm:grid-cols-2 gap-4">
-            {contactMethods.map((method) => {
-                const Icon = method.icon;
-                const isLucideIcon = typeof Icon === 'function';
-                return (
+            {contactMethods.map((method) => (
                   <a
                     key={method.label}
                     href={method.href}
@@ -103,19 +101,14 @@ const Contact = () => {
                     className="bg-card rounded-2xl p-4 sm:p-6 border border-border hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all group"
                   >
                     <div className={`w-12 h-12 rounded-xl ${method.bgColor} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
-                      {isLucideIcon ? (
-                        <Icon className={`w-6 h-6 ${method.iconColor}`} />
-                      ) : (
-                        <FontAwesomeIcon icon={Icon} className={`w-6 h-6 ${method.iconColor}`} />
-                      )}
+                      <FontAwesomeIcon icon={method.icon} className={`w-6 h-6 ${method.iconColor}`} />
                     </div>
                     <div className="font-semibold mb-1 text-sm sm:text-base">{method.label}</div>
                     <div className="text-xs sm:text-sm text-muted-foreground break-words">
                       {method.value}
                     </div>
                   </a>
-                );
-              })}
+              ))}
             </div>
 
             {/* Download Resume */}
