@@ -2,9 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Linkedin, Github, Download, Send } from "lucide-react";
+import { Mail, Download, Send } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faKaggle } from "@fortawesome/free-brands-svg-icons";
+import { faKaggle, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -44,7 +44,7 @@ const Contact = () => {
       iconColor: "text-blue-500",
     },
     {
-      icon: Linkedin,
+      icon: faLinkedin,
       label: "LinkedIn",
       value: "/in/avanish-singh-3530812b1",
       href: "https://www.linkedin.com/in/avanish-singh-3530812b1",
@@ -52,7 +52,7 @@ const Contact = () => {
       iconColor: "text-blue-600",
     },
     {
-      icon: Github,
+      icon: faGithub,
       label: "GitHub",
       value: "@Avanish7974",
       href: "https://github.com/Avanish7974",
@@ -93,7 +93,7 @@ const Contact = () => {
             <div className="grid sm:grid-cols-2 gap-4">
             {contactMethods.map((method) => {
                 const Icon = method.icon;
-                const isFontAwesome = typeof Icon === 'object';
+                const isLucideIcon = typeof Icon === 'function';
                 return (
                   <a
                     key={method.label}
@@ -103,10 +103,10 @@ const Contact = () => {
                     className="bg-card rounded-2xl p-4 sm:p-6 border border-border hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all group"
                   >
                     <div className={`w-12 h-12 rounded-xl ${method.bgColor} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
-                      {isFontAwesome ? (
-                        <FontAwesomeIcon icon={Icon} className={`w-6 h-6 ${method.iconColor}`} />
-                      ) : (
+                      {isLucideIcon ? (
                         <Icon className={`w-6 h-6 ${method.iconColor}`} />
+                      ) : (
+                        <FontAwesomeIcon icon={Icon} className={`w-6 h-6 ${method.iconColor}`} />
                       )}
                     </div>
                     <div className="font-semibold mb-1 text-sm sm:text-base">{method.label}</div>
