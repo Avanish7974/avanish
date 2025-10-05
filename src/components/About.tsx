@@ -57,7 +57,7 @@ const About = () => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-[140px,1fr] gap-2 sm:gap-4 py-2 border-b border-border">
                   <span className="font-semibold">LinkedIn:</span>
-                  <a href="https://www.linkedin.com/in/avanish-singh23/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
+                  <a href="https://www.linkedin.com/in/avanish-singh-3530812b1" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline break-all">
                     linkedin.com/in/avanish-singh-3530812b1
                   </a>
                 </div>

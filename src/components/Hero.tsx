@@ -87,16 +87,16 @@ const Hero = () => {
                 className="p-3 rounded-full bg-card hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
                 aria-label="GitHub Profile"
               >
-                <Github className="h-5 w-5" />
+                <Github className="h-6 w-6" />
               </a>
               <a
-                href="https://www.linkedin.com/in/avanish-singh23/"
+                href="https://www.linkedin.com/in/avanish-singh-3530812b1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-card hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
                 aria-label="LinkedIn Profile"
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-6 w-6" />
               </a>
               <a
                 href="https://www.kaggle.com/avanish1234789"
@@ -105,7 +105,7 @@ const Hero = () => {
                 className="p-3 rounded-full bg-card hover:bg-primary/10 border border-border hover:border-primary transition-all hover:scale-110"
                 aria-label="Kaggle Profile"
               >
-                <SiKaggle className="h-5 w-5" />
+                <SiKaggle className="h-6 w-6" />
               </a>
             </div>
 

@@ -45,8 +45,8 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "/in/avanish-singh23",
-      href: "https://www.linkedin.com/in/avanish-singh23/",
+      value: "/in/avanish-singh-3530812b1",
+      href: "https://www.linkedin.com/in/avanish-singh-3530812b1",
       bgColor: "bg-blue-600/10",
       iconColor: "text-blue-600",
     },
@@ -89,7 +89,7 @@ const Contact = () => {
             </div>
 
             {/* Contact methods */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 gap-4">
               {contactMethods.map((method) => {
                 const Icon = method.icon;
                 return (
@@ -98,13 +98,13 @@ const Contact = () => {
                     href={method.href}
                     target={method.href.startsWith("http") ? "_blank" : undefined}
                     rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="bg-card rounded-2xl p-6 border border-border hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all group"
+                    className="bg-card rounded-2xl p-4 sm:p-6 border border-border hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all group"
                   >
-                    <div className={`w-12 h-12 rounded-xl ${method.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <div className={`w-12 h-12 rounded-xl ${method.bgColor} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
                       <Icon className={`w-6 h-6 ${method.iconColor}`} />
                     </div>
-                    <div className="font-semibold mb-1">{method.label}</div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="font-semibold mb-1 text-sm sm:text-base">{method.label}</div>
+                    <div className="text-xs sm:text-sm text-muted-foreground break-words">
                       {method.value}
                     </div>
                   </a>
