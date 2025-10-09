@@ -1,6 +1,22 @@
+import { useState, MouseEvent } from "react";
 import { Award, Trophy, CheckCircle } from "lucide-react";
 
 const Achievements = () => {
+  const [hoveredAchievement, setHoveredAchievement] = useState<string | null>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>, title: string) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+    setMousePosition({ x, y });
+    setHoveredAchievement(title);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredAchievement(null);
+    setMousePosition({ x: 0, y: 0 });
+  };
   const achievements = [
     {
       title: "Google Cloud Arcade",
@@ -74,15 +90,45 @@ const Achievements = () => {
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12" style={{ perspective: '1500px' }}>
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all group"
+              className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl transition-all duration-300 group"
+              onMouseMove={(e) => handleMouseMove(e, achievement.title)}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                transform: hoveredAchievement === achievement.title
+                  ? `rotateY(${mousePosition.x * 10}deg) rotateX(${-mousePosition.y * 10}deg) scale(1.05) translateZ(20px)`
+                  : 'rotateY(0deg) rotateX(0deg) scale(1) translateZ(0px)',
+                transformStyle: 'preserve-3d',
+                transition: 'transform 0.3s ease-out, box-shadow 0.3s ease-out',
+                boxShadow: hoveredAchievement === achievement.title
+                  ? `${mousePosition.x * 20}px ${mousePosition.y * 20}px 40px rgba(0, 0, 0, 0.3)`
+                  : undefined,
+              }}
             >
               {/* Icon section */}
               <div className={`relative h-48 bg-gradient-to-br ${achievement.color} flex items-center justify-center overflow-hidden`}>
                 <span className="text-7xl drop-shadow-lg">{achievement.icon}</span>
+                {/* Shimmer effect */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background: hoveredAchievement === achievement.title
+                      ? `linear-gradient(${mousePosition.x * 45 + 135}deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%)`
+                      : 'none',
+                  }}
+                />
+                {/* Glow effect */}
+                {hoveredAchievement === achievement.title && (
+                  <div 
+                    className="absolute inset-0 opacity-20"
+                    style={{
+                      background: `radial-gradient(circle at ${(mousePosition.x + 1) * 50}% ${(mousePosition.y + 1) * 50}%, rgba(255,255,255,0.8) 0%, transparent 70%)`,
+                    }}
+                  />
+                )}
                 <div className="absolute top-4 right-4">
                   <CheckCircle className="w-8 h-8 text-white drop-shadow-lg" />
                 </div>
