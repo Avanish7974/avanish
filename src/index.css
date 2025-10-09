@@ -135,4 +135,67 @@ All colors MUST be HSL.
   img[loading="lazy"].loaded {
     opacity: 1;
   }
+
+  /* Custom Cursor Styles */
+  .cursor-follower {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+
+  .cursor-follower.hovering {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cursor-inner {
+    width: 100%;
+    height: 100%;
+    background: hsl(var(--primary) / 0.6);
+    border-radius: 50%;
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.8),
+                0 0 40px hsl(var(--primary) / 0.4),
+                inset 0 0 20px hsl(var(--primary) / 0.6);
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .cursor-ring {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border: 2px solid hsl(var(--primary) / 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+  }
+
+  .cursor-particle {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: hsl(var(--accent) / 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9997;
+    box-shadow: 0 0 10px hsl(var(--accent) / 0.6);
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.8),
+                  0 0 40px hsl(var(--primary) / 0.4),
+                  inset 0 0 20px hsl(var(--primary) / 0.6);
+    }
+    50% {
+      box-shadow: 0 0 30px hsl(var(--primary) / 1),
+                  0 0 60px hsl(var(--primary) / 0.6),
+                  inset 0 0 30px hsl(var(--primary) / 0.8);
+    }
+  }
 }
