@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, MouseEvent } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import tableauImg from "@/assets/tableau-dashboard.jpg";
@@ -10,6 +10,21 @@ import blinkitImg from "@/assets/blinkit-clone.jpg";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>, projectTitle: string) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+    setMousePosition({ x, y });
+    setHoveredProject(projectTitle);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredProject(null);
+    setMousePosition({ x: 0, y: 0 });
+  };
 
   const filters = ["All", "Dashboards", "EDA", "Web","ML"];
 
@@ -115,14 +130,55 @@ const Projects = () => {
               className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all group"
             >
               {/* Project image */}
-              <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/50 to-transparent"></div>
-                <div className="absolute top-4 right-4">
+              <div 
+                className="relative h-48 overflow-hidden"
+                onMouseMove={(e) => handleMouseMove(e, project.title)}
+                onMouseLeave={handleMouseLeave}
+                style={{
+                  perspective: '1000px',
+                }}
+              >
+                <div
+                  className="relative w-full h-full transition-transform duration-300 ease-out"
+                  style={{
+                    transform: hoveredProject === project.title
+                      ? `rotateY(${mousePosition.x * 15}deg) rotateX(${-mousePosition.y * 15}deg) scale(1.05)`
+                      : 'rotateY(0deg) rotateX(0deg) scale(1)',
+                    transformStyle: 'preserve-3d',
+                  }}
+                >
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
+                  {/* Shimmer effect */}
+                  <div 
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{
+                      background: hoveredProject === project.title
+                        ? `linear-gradient(${mousePosition.x * 45 + 135}deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)`
+                        : 'none',
+                    }}
+                  />
+                  {/* Gradient overlay */}
+                  <div 
+                    className="absolute inset-0 bg-gradient-to-t from-card/50 to-transparent"
+                    style={{
+                      opacity: hoveredProject === project.title ? 0.8 : 1,
+                    }}
+                  />
+                  {/* Glow effect */}
+                  {hoveredProject === project.title && (
+                    <div 
+                      className="absolute inset-0 opacity-20"
+                      style={{
+                        background: `radial-gradient(circle at ${(mousePosition.x + 1) * 50}% ${(mousePosition.y + 1) * 50}%, hsl(var(--primary)) 0%, transparent 70%)`,
+                      }}
+                    />
+                  )}
+                </div>
+                <div className="absolute top-4 right-4 z-10">
                   <span className="bg-primary text-primary-foreground text-xs px-3 py-1 rounded-full font-semibold">
                     {project.category}
                   </span>
