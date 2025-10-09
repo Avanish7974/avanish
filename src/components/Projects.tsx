@@ -123,61 +123,51 @@ const Projects = () => {
         </div>
 
         {/* Projects grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8" style={{ perspective: '1500px' }}>
           {filteredProjects.map((project) => (
             <div
               key={project.title}
-              className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl hover:-translate-y-2 hover:scale-105 transition-all group"
+              className="bg-card rounded-3xl overflow-hidden border border-border shadow-lg hover:shadow-2xl transition-all duration-300 group"
+              onMouseMove={(e) => handleMouseMove(e, project.title)}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                transform: hoveredProject === project.title
+                  ? `rotateY(${mousePosition.x * 10}deg) rotateX(${-mousePosition.y * 10}deg) scale(1.05) translateZ(20px)`
+                  : 'rotateY(0deg) rotateX(0deg) scale(1) translateZ(0px)',
+                transformStyle: 'preserve-3d',
+                transition: 'transform 0.3s ease-out, box-shadow 0.3s ease-out',
+                boxShadow: hoveredProject === project.title
+                  ? `${mousePosition.x * 20}px ${mousePosition.y * 20}px 40px rgba(0, 0, 0, 0.3)`
+                  : undefined,
+              }}
             >
               {/* Project image */}
-              <div 
-                className="relative h-48 overflow-hidden"
-                onMouseMove={(e) => handleMouseMove(e, project.title)}
-                onMouseLeave={handleMouseLeave}
-                style={{
-                  perspective: '1000px',
-                }}
-              >
-                <div
-                  className="relative w-full h-full transition-transform duration-300 ease-out"
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+                {/* Shimmer effect */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{
-                    transform: hoveredProject === project.title
-                      ? `rotateY(${mousePosition.x * 15}deg) rotateX(${-mousePosition.y * 15}deg) scale(1.05)`
-                      : 'rotateY(0deg) rotateX(0deg) scale(1)',
-                    transformStyle: 'preserve-3d',
+                    background: hoveredProject === project.title
+                      ? `linear-gradient(${mousePosition.x * 45 + 135}deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)`
+                      : 'none',
                   }}
-                >
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                  {/* Shimmer effect */}
+                />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-card/50 to-transparent" />
+                {/* Glow effect */}
+                {hoveredProject === project.title && (
                   <div 
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="absolute inset-0 opacity-20"
                     style={{
-                      background: hoveredProject === project.title
-                        ? `linear-gradient(${mousePosition.x * 45 + 135}deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%)`
-                        : 'none',
+                      background: `radial-gradient(circle at ${(mousePosition.x + 1) * 50}% ${(mousePosition.y + 1) * 50}%, hsl(var(--primary)) 0%, transparent 70%)`,
                     }}
                   />
-                  {/* Gradient overlay */}
-                  <div 
-                    className="absolute inset-0 bg-gradient-to-t from-card/50 to-transparent"
-                    style={{
-                      opacity: hoveredProject === project.title ? 0.8 : 1,
-                    }}
-                  />
-                  {/* Glow effect */}
-                  {hoveredProject === project.title && (
-                    <div 
-                      className="absolute inset-0 opacity-20"
-                      style={{
-                        background: `radial-gradient(circle at ${(mousePosition.x + 1) * 50}% ${(mousePosition.y + 1) * 50}%, hsl(var(--primary)) 0%, transparent 70%)`,
-                      }}
-                    />
-                  )}
-                </div>
+                )}
                 <div className="absolute top-4 right-4 z-10">
                   <span className="bg-primary text-primary-foreground text-xs px-3 py-1 rounded-full font-semibold">
                     {project.category}
